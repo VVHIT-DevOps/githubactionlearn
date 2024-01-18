@@ -1,0 +1,17 @@
+name: issue workflow test
+
+on: 
+  issues:
+    types: [opened, edited, milestoned]
+
+jobs: 
+  issue:
+    runs-on: ubuntu-latest
+
+    steps:
+     - run: echo "hello"
+  deploy:
+    runs-on: windows-latest
+
+    steps:
+      - run: echo "hellow from windows"
